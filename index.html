@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReflectQ Quran Reflection App</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F6F5E",
+              dark: "#2C3E50",
+              soft: "#E9EEF2",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .page-section {
+        display: none;
+      }
+      .page-section:target {
+        display: block;
+      }
+      body:has(.page-section:target) #hero {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans bg-[#2F3F4F]">
+    <section id="hero" class="relative min-h-screen overflow-hidden text-white">
+      <!-- SHADOW EDGE -->
+      <div
+  class="absolute inset-y-0 
+         right-[-105%] sm:right-[-70%] lg:right-[-190px]
+         w-[80%] sm:w-[55%] lg:w-[50%]
+         bg-black/40 
+         skew-x-[18deg] origin-bottom-right
+         blur-md 
+         z-0">
+</div>
+
+      <!-- SHADOW SOFT -->
+      <div
+  class="absolute inset-y-0 
+         right-[-110%] sm:right-[-75%] lg:right-[-190px]
+         w-[80%] sm:w-[55%] lg:w-[50%]
+         bg-black/25 
+         skew-x-[18deg] origin-bottom-right
+         blur-3xl 
+         z-0">
+</div>
+
+      <!-- WHITE DIAGONAL -->
+      <div
+  class="absolute inset-y-0 
+         right-[-120%] sm:right-[-55%] lg:right-[-330px]
+         w-[85%] sm:w-[60%] lg:w-[58%]
+         skew-x-[18deg] origin-bottom-right
+         z-10 
+         overflow-hidden 
+         bg-slate-200/70 backdrop-blur-sm">
+  
+  <div
+    class="absolute inset-0 
+           bg-[url('assets/images/image-bg.png')] 
+           bg-cover bg-center 
+           opacity-40">
+  </div>
+</div>
+
+      <!-- CONTENT WRAPPER -->
+      <div class="relative z-10 max-w-7xl mx-auto px-8 py-24">
+        <!-- GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+          <!-- LEFT CONTENT -->
+          <div>
+            <div class="mb-6">
+              <img src="assets/images/reflectq-logo.png" class="w-20 h-20" />
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6">ReflectQ</h1>
+
+            <p
+              class="text-white max-w-xl mb-8 leading-7 text-left lg:text-justify"
+            >
+              ReflectQ is an AI-based Quran journal and
+              <span class="text-green-400 font-medium">
+                Muslim mental health app
+              </span>
+              that helps Muslims manage their emotions, stress, and inner
+              struggles through Quran journaling and daily verse-based
+              <span class="text-green-400 font-medium">
+                emotional reflection.
+              </span>
+            </p>
+
+            <!-- DOWNLOAD BUTTONS -->
+            <div class="flex flex-wrap gap-4">
+              <!-- GOOGLE PLAY -->
+              <a
+                href="#"
+                class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md cursor-pointer select-none transition-all duration-300 ease-out hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              >
+                <img
+                  src="assets/icons/play.svg"
+                  class="h-6 pointer-events-none"
+                />
+
+                <span class="flex flex-col leading-tight text-left">
+                  <span class="text-[11px] text-gray-600"> Get it on </span>
+                  <span class="text-base font-semibold"> Google Play </span>
+                </span>
+              </a>
+
+              <!-- APP STORE -->
+              <a
+                href="#"
+                class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md cursor-pointer select-none transition-all duration-300 ease-out hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              >
+                <img
+                  src="assets/icons/apple.svg"
+                  class="h-6 pointer-events-none"
+                />
+
+                <span class="flex flex-col leading-tight text-left">
+                  <span class="text-[11px] text-gray-600">
+                    Download on the
+                  </span>
+                  <span class="text-base font-semibold"> App Store </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOATING LAYER  -->
+      <div
+        class="relative translate-y-[-80px] sm:translate-y-[-60px] md:translate-y-[-40px] flex justify-center lg:absolute lg:right-24 lg:top-1/2 lg:-translate-y-[58%] z-30"
+      >
+        <div
+          class="relative flex flex-col items-center gap-8 lg:flex-row lg:items-end lg:gap-5 sm:gap-10 scale-90 sm:scale-95 lg:scale-100 lg:top-4"
+        >
+          <!-- PHONE KIRI -->
+          <div
+            class="relative w-[150px] sm:w-[210px] lg:w-[230px]"
+          >
+            <!-- NOTE -->
+            <div
+              class="absolute -top-4 left-9 -translate-x-1/2 w-[190px] bg-[#2C3E50]/70 backdrop-blur-md rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] px-4 py-3 text-white text-sm z-40"
+            >
+              <strong>ReflectQ</strong>
+              <span class="block text-xs text-slate-300">
+                Connect with your feelings through the Qur’an.
+              </span>
+            </div>
+
+            <img
+              src="assets/images/display-1.png"
+              class="w-full drop-shadow-2xl"
+            />
+          </div>
+          <!-- PHONE KANAN -->
+          <div class="relative w-[150px] sm:w-[210px] lg:w-[230px]">
+            <!-- NOTE -->
+            <div
+              class="absolute -bottom-4 left-[170px] -translate-x-1/2 w-[190px] bg-[#2C3E50]/70 backdrop-blur-md rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] px-4 py-3 text-white text-sm z-40"
+            >
+              <strong>Heart Reflection</strong>
+              <span class="block text-xs text-slate-300">
+                Reflect deeply and reconnect with your heart.
+              </span>
+            </div>
+            <img
+              src="assets/images/display-2.png"
+              class="w-full drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div
+        class="absolute bottom-0 left-0 right-0 z-20 bg-[#50637D]/70 backdrop-blur-md py-4 rounded-t-2xl"
+      >
+        <div
+          class="max-w-7xl mx-auto px-8 flex items-center justify-between text-white"
+        >
+          <p class="text-sm opacity-90 font-bold">admin@reflectq.app</p>
+          <div class="flex gap-8 text-base">
+            <a href="#faq" class="hover:underline">FAQ</a>
+            <a href="#privacy" class="hover:underline">Privacy</a>
+            <a href="#terms" class="hover:underline">Terms</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY POLICE -->
+    <section
+      id="privacy"
+      class="page-section min-h-screen bg-slate-100 text-gray-800 py-24"
+    >
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">PRIVACY POLICY</h2>
+        <div class="space-y-5 text-sm leading-relaxed">
+          <h3 class="font-bold">1. INTRODUCTION</h3>
+          <p>
+            This Privacy Policy document explains how the ReflectQ application
+            (“Application”, “We”) collects, uses, stores, and protects Users'
+            personal data.<br /><br>ReflectQ is developed and managed individually,
+            not as part of a specific organization or business entity. By
+            accessing and using the ReflectQ Application, Users are deemed to
+            have read, understood, and agreed to all the provisions in this
+            Privacy Policy.
+          </p>
+          <h3 class="font-bold">2. DATA & INFORMATION WE COLLECT</h4>
+          <p>
+            We collect certain data and information to provide, manage, and
+            improve the ReflectQ Application services.
+          </p>
+          <h4 class="font-bold">2.1. INFORMATION YOU PROVIDE DIRECTLY</h4>
+          <p>We collect the following information when Users use the Application:<br><br>
+          <span class="text-500 font-medium">
+                a. Account Information
+              </span>
+            <ul>
+              <li>
+                - Email address
+              </li>
+              <li>
+                - Display name and/or full name
+              </li>
+              <li>
+                - Phone number
+              </li>
+              <li>
+                - Email and password for account authentication purposes
+              </li>
+              <li>
+                - Google account information (full account name, profile photo, email address,
+                <li>if the User uses the Google Sign-In feature).</li>
+              </li>
+            </ul></p>
+            <span class="text-500 font-medium">
+                b. Picture
+              </span>
+              <ul>
+                <li>- Profile photo uploaded by User</li>
+              </ul><br>
+            <span class="text-500 font-medium">
+                c. Reflection session data
+              </span>
+              <ul>
+                <li>- Mood data</li>
+                <li>- Qur'an verses</li>
+                <li>- Personal reflections and inspirations voluntarily entered by users</li>
+                <li>- Relevant prayer data</li>
+                <li>- Personal affirmations</li>
+              </ul><br>
+          <h4 class="font-bold">2.2. AUTOMATICALLY COLLECTED INFORMATION</h4>
+          <p>When Users access the Application, we may automatically collect certain information, including:<br><br>
+          <span class="text-500 font-medium">
+                a. Usage Data
+              </span>
+              <ul>
+                <li>- Frequency of application use</li>
+                <li>- Interaction with Application Features</li>
+              </ul><br>
+            <span class="text-500 font-medium">
+                b. Transaction Data and Virtual Currency (CoinQ)</span>
+                <p>ReflectQ provides a virtual currency feature (CoinQ) that can be used to access AI-based features within the Application. Users can obtain CoinQ through purchases using In-App Purchase (IAP) processed by Apple Pay. In the coin purchase process:</p>
+                <ul>
+                  <li>- All payment transactions are processed securely by Apple.</li>
+                  <li>- We do not collect, store, or process sensitive payment data such as credit card numbers, bank account information, or other billing data.</li>
+                  <li>- The information we receive is limited to the transaction status, the amount of CoinQ purchased, and the transaction time for record-keeping and service provision purposes.</li>
+                </ul>
+          </p>The purchase price of CoinQ is displayed in USD and will be automatically adjusted by the Apple payment system based on the User's Apple ID region.</p>
+          <h4 class="font-bold">2.3. DEVICE ACCESS PERISSION</h4>
+<p>
+  To support certain Application features, ReflectQ may request access
+  permissions to specific device functions as described below:
+</p>
+
+<span class="font-medium">a. Google Calendar Access (READ_CALENDAR, WRITE_CALENDAR)</span>
+<p>
+  This permission is used solely to support the automatic reflection reminder
+  feature based on the schedule specified by the User.
+</p>
+<ul>
+  <li>- ReflectQ does not read, modify, or store the contents of the User’s calendar.</li>
+  <li>- The Application only creates reminder entries according to User instructions.</li>
+</ul>
+
+<br />
+
+<span class="font-medium">b. Media Access (READ_EXTERNAL_STORAGE, READ_MEDIA_IMAGES)</span>
+<p>
+  This permission allows Users to select images from their device gallery for:
+</p>
+<ul>
+  <li>- Profile photo selection</li>
+  <li>- Inspirational poster creation</li>
+</ul>
+<p>
+  ReflectQ only accesses images explicitly selected by the User and does not
+  scan or access the entire gallery. Selected images are securely uploaded to
+  the ReflectQ server.
+</p>
+
+<br />
+
+<span class="font-medium">c. Push Notifications</span>
+<p>
+  ReflectQ provides push notifications to deliver relevant and important
+  information related to service usage, including reflection schedule
+  reminders.
+</p>
+<p>
+  We utilize Firebase Cloud Messaging (FCM), integrated with Apple Push
+  Notification Service (APNs), to securely deliver notifications. This process
+  uses a technical device identifier (push notification token) that is used
+  solely for notification delivery purposes and cannot be used to personally
+  identify Users.
+</p>
+<p>
+  ReflectQ does not collect, store, or process personal data in connection with
+  push notification delivery. Users may enable or disable notifications at any
+  time through their device settings.
+</p>
+<h3 class="font-bold">3. PURPOSE OF DATA USE</h3>
+<p>
+  The data and information collected are used for the following purposes:
+</p>
+<ul>
+  <li>- Providing and operating Application features optimally</li>
+  <li>- Customizing the User experience based on preferences and activities</li>
+  <li>- Sending reflection reminder notifications</li>
+  <li>- Maintaining account security and preventing misuse</li>
+  <li>- Managing CoinQ balances, transactions, and access to paid features</li>
+</ul>
+<p>
+  ReflectQ does not use Users’ personal data for third-party advertising or
+  cross-application tracking purposes.
+</p>
+<h3 class="font-bold">4. DATA STORAGE & SECURITY</h3>
+<p>
+  ReflectQ implements reasonable technical and organizational security measures
+  in accordance with industry standards to protect Users’ personal data.
+</p>
+<ul>
+  <li>- Data encryption</li>
+  <li>- Restricted access control</li>
+  <li>- Controlled system management</li>
+</ul>
+
+<p>
+  User data transmitted through the Application is protected by encryption
+  during transmission (encrypted in transit) to prevent unauthorized access.
+</p>
+
+<p>
+  User Data is stored and managed using third-party services such as Supabase
+  and Firebase. ReflectQ ensures that these service providers apply adequate
+  data protection standards.
+</p>
+
+<p>
+  For in-application transactions, ReflectQ collaborates with Apple as the
+  payment service provider. All payment data is processed directly by Apple in
+  accordance with Apple’s privacy policy and security standards.
+</p>
+<h3 class="font-bold">5. USER RIGHTS REGARDING PERSONAL DATA</h3>
+<p>
+  In accordance with Indonesian Law Number 27 of 2022 on Personal Data
+  Protection, Users have the following rights:
+</p>
+
+<span class="font-medium">a. Right to Information</span>
+<p>
+  Users have the right to obtain information regarding the legal basis,
+  purpose, and accountability related to the processing of personal data.
+</p>
+
+<span class="font-medium">b. Right of Access and Correction</span>
+<p>
+  Users may access, update, correct, or complete their personal data through
+  Application features.
+</p>
+
+<span class="font-medium">c. Right to Withdraw Consent</span>
+<p>
+  Users may withdraw consent for certain data processing through Application
+  permission settings. Withdrawal may limit access to certain features.
+</p>
+
+<span class="font-medium">d. Right to Erase Personal Data</span>
+<p>
+  Users may request deletion of personal data in accordance with applicable
+  laws. Deletion may result in loss of access to Application services.
+</p>
+
+<span class="font-medium">e. Right to Object and Restrict Processing</span>
+<p>
+  Users may object to or request restrictions on certain data processing by
+  contacting ReflectQ through official channels.
+</p>
+<h3 class="font-bold">6. ACCOUNT & PERSONAL DATA DELETION</h3>
+
+<h4 class="font-bold">6.1. Account Deletion</h4>
+<p>
+  Users may request account deletion through the “Delete Account” feature in
+  the Application or by contacting ReflectQ via official communication
+  channels.
+</p>
+
+<h4 class="font-bold">6.2. Confirmation of Deletion</h4>
+<p>
+  ReflectQ will display a confirmation notice before processing the deletion
+  request. Account recovery requests can be submitted through ReflectQ
+  support channels.
+</p>
+
+<h4 class="font-bold">6.3. Deletion of Personal Data</h4>
+<p>
+  Account deletion results in the removal of personal data including:
+</p>
+<ul>
+  <li>- Account and authentication data</li>
+  <li>- Reflection history</li>
+  <li>- Transaction and CoinQ history</li>
+  <li>- Subscription and notification data</li>
+  <li>- Device and usage logs</li>
+</ul>
+
+<p>
+  All User data will be permanently deleted within a maximum of 30 days after
+  the deletion request, except where retention is required by law.
+</p>
+<h3 class="font-bold">7. THIRD-PARTY SERVICES</h3>
+<p>
+  ReflectQ uses limited third-party services to support Application
+  functionality:
+</p>
+<ul>
+  <li>- Supabase (database and storage)</li>
+  <li>- Google Firebase (notifications and analytics)</li>
+  <li>- EQuran (Qur’an verse references)</li>
+  <li>- OpenAI & Gemini (AI-based features)</li>
+  <li>- Apple In-App Payments (payment processing)</li>
+</ul>
+
+<p>
+  ReflectQ does not sell, rent, or trade Users’ personal data to third parties.
+</p>
+<h3 class="font-bold">8. POLICY CHANGES</h3>
+<p>
+  ReflectQ may update this Privacy Policy from time to time. Users will be
+  notified of material changes through the Application.
+</p>
+<h3 class="font-bold">9. CONTACT US</h3>
+<p>
+  For questions or requests related to this Privacy Policy, Users may contact
+  ReflectQ through:
+</p>
+<ul>
+  <li>- Email: admin@reflectq.app</li>
+  <li>- Phone: +62-877-7576-3231</li>
+  <li>- Website: app.reflectq.org</li>
+</ul>
+        </div>
+      </div>
+      <!-- BACK BUTTON -->
+  <a href="#hero"
+     class="fixed bottom-5 right-5
+          sm:bottom-6 sm:right-6
+          z-50
+          flex items-center justify-center
+          w-12 h-12 sm:w-14 sm:h-14
+          rounded-full
+          bg-gray-800 text-white
+          shadow-xl
+          hover:bg-gray-500
+          active:scale-95
+          transition">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-6 h-6"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor"
+         stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15 19l-7-7 7-7" />
+    </svg>
+  </a>
+    </section>
+
+    <!-- TERMS OF SERVICE -->
+    <section
+      id="terms"
+      class="page-section min-h-screen bg-slate-100 text-gray-800 py-24"
+    >
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">USER TERMS AND CONDITIONS</h2>
+
+        <div class="space-y-5 text-sm leading-relaxed">
+          <h3 class="font-bold">1. INTRODUCTION</h3>
+<p>
+  These User Terms and Conditions ("Terms") govern the access and use of the
+  ReflectQ application ("Application", "We") by users ("User", "You").
+</p>
+<p>
+  ReflectQ is developed and managed individually. By downloading, accessing,
+  or using the Application, the User confirms that they have read, understood,
+  and agreed to these Terms. If the User does not agree, the User is advised
+  not to use the Application.
+</p>
+<h3 class="font-bold">2. USER ACCOUNT</h3>
+<p>
+  To access certain features, Users must create an account by providing
+  accurate and up-to-date information. Users are fully responsible for:
+</p>
+<ul>
+  <li>- Maintaining the confidentiality of account information and passwords</li>
+  <li>- All activities conducted under their account</li>
+</ul>
+<p>
+  Login may be performed using email and password or Google Account
+  (Google Sign-In). ReflectQ reserves the right to suspend or deactivate
+  accounts that violate these Terms or applicable laws.
+</p>
+<h3 class="font-bold">3. APPLICATION USE</h3>
+<p>
+  Users agree to use the Application:
+</p>
+<ul>
+  <li>- For personal and lawful purposes only</li>
+  <li>- In compliance with applicable laws and regulations</li>
+</ul>
+
+<p>
+  Users are prohibited from:
+</p>
+<ul>
+  <li>- Misusing Application features</li>
+  <li>- Performing actions that harm the Application or other Users</li>
+  <li>- Accessing or attempting to access the system unlawfully</li>
+  <li>- Using the Application for illegal activities</li>
+</ul>
+<h3 class="font-bold">4. PAID FEATURES & VIRTUAL CURRENCY (COINQ)</h3>
+<p>
+  ReflectQ offers premium subscription features processed exclusively through
+  Apple In-App Purchase and subject to auto-renewal. Users may cancel the
+  subscription at any time via Apple ID settings.
+</p>
+<p>
+  Subscription fees are non-refundable, including cancellations made before
+  the subscription period ends, unless otherwise determined by Apple policies.
+</p>
+<p>
+  ReflectQ does not store sensitive payment information. Transaction data
+  received is limited to subscription status and transaction history for
+  record-keeping and legal compliance purposes.
+</p>
+
+<p>
+  ReflectQ provides a virtual currency called <strong>CoinQ</strong>, used
+  internally to access certain features. Users receive an initial balance of
+  150 CoinQ and 500 PoinQ upon account creation.
+</p>
+<p>
+  CoinQ is not legal tender, has no real monetary value, cannot be transferred,
+  exchanged, or cashed out, and may only be used within the Application.
+</p>
+<h3 class="font-bold">5. PURCHASE & PAYMENT OF COINQ</h3>
+<p>
+  CoinQ purchases are processed via Apple In-App Purchase (IAP). ReflectQ does
+  not collect or store payment data such as credit card or billing information.
+</p>
+<p>
+  Prices are displayed in USD and adjusted automatically by Apple based on
+  the User’s Apple ID region. All refunds, cancellations, and payment policies
+  follow Apple’s terms.
+</p>
+<h3 class="font-bold">6. POINQ & COINQ REWARD SYSTEM</h3>
+<p>
+  Users may earn PoinQ and CoinQ by completing specific actions within the
+  Application. Reward amounts are determined based on predefined activities
+  and may be updated periodically.
+</p>
+<p>
+  ReflectQ reserves the right to modify reward mechanisms without prior notice.
+</p>
+<h3 class="font-bold">7. FEATURE & PRICE CHANGES</h3>
+<p>
+  ReflectQ reserves the right to:
+</p>
+<ul>
+  <li>- Add, modify, or discontinue Application features</li>
+  <li>- Change CoinQ usage mechanisms</li>
+  <li>- Adjust prices in accordance with platform policies</li>
+</ul>
+<p>
+  Changes take effect once displayed within the Application.
+</p>
+<h3 class="font-bold">8. INTELLECTUAL PROPERTY RIGHTS</h3>
+<p>
+  All content, designs, logos, features, and materials within the Application
+  are the property of ReflectQ and protected by applicable laws.
+</p>
+<p>
+  Users are prohibited from copying, modifying, distributing, or exploiting
+  any part of the Application without prior written permission.
+</p>
+<h3 class="font-bold">9. TERMINATION OF SERVICE & ACCOUNT</h3>
+<p>
+  ReflectQ may temporarily or permanently suspend or terminate Application
+  services or User accounts for violations of these Terms, security reasons,
+  or legal obligations.
+</p>
+<p>
+  Remaining CoinQ balances are non-refundable upon account termination.
+</p>
+<h3 class="font-bold">10. LIMITATION OF LIABILITY</h3>
+<p>
+  The Application is provided “as is.” ReflectQ does not guarantee uninterrupted
+  or error-free service and is not responsible for losses arising from factors
+  beyond its control.
+</p>
+<h3 class="font-bold">11. CHANGES TO TERMS</h3>
+<p>
+  ReflectQ may update these Terms periodically. Continued use of the
+  Application constitutes acceptance of the updated Terms.
+</p>
+<h3 class="font-bold">12. GOVERNING LAW</h3>
+<p>
+  These Terms are governed by the laws of the Republic of Indonesia. Disputes
+  shall first be resolved through mutual consultation within 30 calendar days
+  before pursuing legal action.
+</p>
+<h3 class="font-bold">13. PRIVACY POLICY</h3>
+<p>
+  Personal data processing is governed by the Privacy Policy, which forms an
+  integral part of these Terms. By using the Application, Users agree to data
+  processing in accordance with applicable laws.
+</p>
+<h3 class="font-bold">14. CONTACT US</h3>
+<ul>
+  <li>- Email: admin@reflectq.app</li>
+  <li>- Phone: +62-877-7576-3231</li>
+  <li>- Website: app.reflectq.org</li>
+</ul>
+        </div>
+      </div>
+      <!-- BACK BUTTON -->
+  <a href="#hero"
+     class="fixed bottom-5 right-5
+          sm:bottom-6 sm:right-6
+          z-50
+          flex items-center justify-center
+          w-12 h-12 sm:w-14 sm:h-14
+          rounded-full
+          bg-gray-800 text-white
+          shadow-xl
+          hover:bg-gray-500
+          active:scale-95
+          transition">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-6 h-6"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor"
+         stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15 19l-7-7 7-7" />
+    </svg>
+  </a>
+    </section>
+
+    <!-- FAQ -->
+    <section
+      id="faq"
+      class="bg-[#2F3F4F] text-white py-24 scroll-mt-24 page-section min-h-screen"
+    >
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">FAQ</h2>
+
+        <div class="space-y-4">
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      What is ReflectQ?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      ReflectQ is an AI-powered self-reflection and daily journaling application designed to help users write personal reflections, understand their emotions, and receive personalized reflection content and Quranic verse recommendations to support personal growth and spiritual reflection.
+      ReflectQ serves as a reflection companion and is not a substitute for professional, medical, or religious advice.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      How does the AI feature work in ReflectQ?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      ReflectQ’s AI analyzes the reflection input provided by users to generate Quranic verse recommendations, follow-up reflection prompts, and personalized reflective insights. The AI provides guidance and suggestions only and does not make absolute judgments or final decisions. Users remain fully in control of how the recommendations are used.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      Does ReflectQ provide religious or psychological advice?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      All reflection content and recommendations in ReflectQ are intended to support personal reflection and self-awareness based on the Quran. Quranic verses are referenced from official sources such as eQuran and publications by the Indonesian Ministry of Religious Affairs.
+      These recommendations are provided for reflection purposes only and do not constitute authoritative religious rulings, interpretations, or professional psychological advice.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      What data does ReflectQ collect?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      ReflectQ collects data necessary to provide its services, including account information (such as email, name, and phone number), reflection entries submitted by users, application usage data, and limited device information.
+      Payment data is not stored by ReflectQ and is fully processed by Apple.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      Is my reflection data private and secure?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      Yes. User reflection data is treated as private and protected using industry-standard security measures, including encryption in transit and restricted internal access. ReflectQ does not share user reflection data with third parties for marketing purposes.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      Does ReflectQ share my data with third parties?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      ReflectQ uses third-party services such as Supabase, Firebase, OpenAI, Google Gemini, and eQuran solely to support application functionality. Data sharing is limited to technical necessities and is subject to each provider’s respective privacy policies.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      How can I change the app theme?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      You can change the app theme by tapping the color palette icon on the Home screen and selecting either Light Mode or Dark Mode.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      How can I change the app language?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      You can change the app language by tapping the language icon on the Home screen and selecting your preferred language. ReflectQ supports Indonesian, English, Spanish, French, and Arabic.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      What is the Premium feature and how do I subscribe?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      The Premium feature provides exclusive content designed to help users gain deeper insights into their spiritual journey. To subscribe, go to Profile &gt; Premium and select your preferred plan.
+      Payments are processed via Apple In-App Purchase. ReflectQ does not store payment information, and all transactions are handled securely by Apple.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      How can I contact support?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      You can contact our support team via email or WhatsApp through the Profile &gt; Contact Us menu. Our team will be happy to assist you.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      Can ReflectQ be used offline?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      Currently, ReflectQ requires an active internet connection. Internet access is necessary for data processing, account synchronization, AI-powered features, and third-party services.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      How can I change my account password?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      To change your password, go to Profile &gt; Profile Info, enter your current password, new password, and password confirmation, then tap Change Password to save your changes.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      I forgot my password. How can I reset it?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      If you forget your password, tap the Forgot Password button on the login screen and enter your registered email address. ReflectQ will send you a password reset link via email. After setting a new password, you can log in again.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      Can I cancel my subscription? Is there a refund?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      You can cancel your Premium subscription via Profile &gt; Premium or through your Apple ID account settings at any time. Cancellation will stop automatic renewal for the next billing period.
+      Payments already made are non-refundable in accordance with Apple’s policies. Premium access remains active until the end of the subscription period.
+    </p>
+  </details>
+
+  <details class="bg-white/10 rounded-xl p-4">
+    <summary class="cursor-pointer font-medium">
+      Can I delete my account and personal data?
+    </summary>
+    <p class="mt-3 text-sm opacity-90">
+      Yes. You can request account deletion through the Delete Account feature in the app or by contacting ReflectQ support via email or WhatsApp. To delete your account through the app, go to Profile &gt; Profile Info and select Delete Account.
+      After confirmation, your account will be inaccessible and your data will be retained for up to 30 days before permanent deletion. During this period, you may contact support to restore your account if needed.
+    </p>
+  </details>
+
+</div>
+
+      </div>
+      <!-- BACK BUTTON -->
+  <a href="#hero"
+     class="fixed bottom-5 right-5
+          sm:bottom-6 sm:right-6
+          z-50
+          flex items-center justify-center
+          w-12 h-12 sm:w-14 sm:h-14
+          rounded-full
+          bg-white text-black
+          shadow-xl
+          hover:bg-gray-500
+          active:scale-95
+          transition">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-6 h-6"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor"
+         stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15 19l-7-7 7-7" />
+    </svg>
+  </a>
+    </section>
+  </body>
+</html>
