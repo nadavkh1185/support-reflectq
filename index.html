@@ -29,6 +29,9 @@
       body:has(.page-section:target) #hero {
         display: none;
       }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
     </style>
   </head>
 
@@ -103,7 +106,7 @@
             <div class="flex flex-wrap gap-4">
               <!-- GOOGLE PLAY -->
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.reflectq.app"
                 class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md cursor-pointer select-none transition-all duration-300 ease-out hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
                 <img
@@ -185,20 +188,31 @@
       </div>
 
       <!-- BOTTOM BAR -->
-      <div
-        class="absolute bottom-0 left-0 right-0 z-20 bg-[#50637D]/70 backdrop-blur-md py-4 rounded-t-2xl"
-      >
-        <div
-          class="max-w-7xl mx-auto px-8 flex items-center justify-between text-white"
-        >
-          <p class="text-sm opacity-90 font-bold">admin@reflectq.app</p>
-          <div class="flex gap-8 text-base">
-            <a href="#faq" class="hover:underline">FAQ</a>
-            <a href="#privacy" class="hover:underline">Privacy</a>
-            <a href="#terms" class="hover:underline">Terms</a>
-          </div>
-        </div>
-      </div>
+<footer
+  class="fixed bottom-0 left-0 w-full
+         z-50
+         bg-[#50637D]/80 backdrop-blur-md
+         border-t border-white/10 rounded-t-3xl"
+>
+  <div
+    class="mx-auto
+           max-w-7xl
+           px-4 sm:px-8
+           h-14 sm:h-16
+           flex items-center justify-between
+           text-white
+           pb-safe"
+  >
+    <p class="text-xs sm:text-sm font-bold opacity-90 truncate">
+      admin@reflectq.app
+    </p>
+    <div class="flex gap-5 sm:gap-8 text-sm sm:text-base">
+      <a href="#faq" class="hover:underline">FAQ</a>
+      <a href="#privacy" class="hover:underline">Privacy</a>
+      <a href="#terms" class="hover:underline">Terms</a>
+    </div>
+  </div>
+</footer>
     </section>
 
     <!-- PRIVACY POLICE -->
@@ -473,6 +487,8 @@
   <li>- Phone: +62-877-7576-3231</li>
   <li>- Website: app.reflectq.org</li>
 </ul>
+<br>
+<p class="text-center text-10 font-medium">Version 2.0.0 </p>
         </div>
       </div>
       <!-- BACK BUTTON -->
@@ -655,6 +671,8 @@
   <li>- Phone: +62-877-7576-3231</li>
   <li>- Website: app.reflectq.org</li>
 </ul>
+<br>
+<p class="text-center text-10 font-medium">Version 2.0.0 </p>
         </div>
       </div>
       <!-- BACK BUTTON -->
@@ -837,7 +855,8 @@
 
       </div>
       <!-- BACK BUTTON -->
-  <a href="#hero"
+  <section>
+    <a href="#hero"
      class="fixed bottom-5 right-5
           sm:bottom-6 sm:right-6
           z-50
@@ -859,6 +878,6 @@
             d="M15 19l-7-7 7-7" />
     </svg>
   </a>
-    </section>
+  </section>
   </body>
 </html>
