@@ -19,6 +19,7 @@
         },
       };
     </script>
+
     <style>
       .page-section {
         display: none;
@@ -36,56 +37,60 @@
   </head>
 
   <body class="font-sans bg-[#2F3F4F]">
+    <!-- HERO -->
     <section id="hero" class="relative min-h-screen overflow-hidden text-white">
       <!-- SHADOW EDGE -->
       <div
-  class="absolute inset-y-0 
-         right-[-105%] sm:right-[-70%] lg:right-[-190px]
-         w-[80%] sm:w-[55%] lg:w-[50%]
-         bg-black/40 
-         skew-x-[18deg] origin-bottom-right
-         blur-md 
-         z-0">
-</div>
+        class="absolute inset-y-0
+               right-[-105%] sm:right-[-70%] lg:right-[-190px]
+               w-[80%] sm:w-[55%] lg:w-[50%]
+               bg-black/40
+               skew-x-[18deg] origin-bottom-right
+               blur-md
+               z-0"
+      ></div>
 
       <!-- SHADOW SOFT -->
       <div
-  class="absolute inset-y-0 
-         right-[-110%] sm:right-[-75%] lg:right-[-190px]
-         w-[80%] sm:w-[55%] lg:w-[50%]
-         bg-black/25 
-         skew-x-[18deg] origin-bottom-right
-         blur-3xl 
-         z-0">
-</div>
+        class="absolute inset-y-0
+               right-[-110%] sm:right-[-75%] lg:right-[-190px]
+               w-[80%] sm:w-[55%] lg:w-[50%]
+               bg-black/25
+               skew-x-[18deg] origin-bottom-right
+               blur-3xl
+               z-0"
+      ></div>
 
       <!-- WHITE DIAGONAL -->
       <div
-  class="absolute inset-y-0 
-         right-[-120%] sm:right-[-55%] lg:right-[-330px]
-         w-[85%] sm:w-[60%] lg:w-[58%]
-         skew-x-[18deg] origin-bottom-right
-         z-10 
-         overflow-hidden 
-         bg-slate-200/70 backdrop-blur-sm">
-  
-  <div
-    class="absolute inset-0 
-           bg-[url('assets/images/image-bg.png')] 
-           bg-cover bg-center 
-           opacity-40">
-  </div>
-</div>
+        class="absolute inset-y-0
+               right-[-120%] sm:right-[-55%] lg:right-[-330px]
+               w-[85%] sm:w-[60%] lg:w-[58%]
+               skew-x-[18deg] origin-bottom-right
+               z-10
+               overflow-hidden
+               bg-slate-200/70 backdrop-blur-sm"
+      >
+        <div
+          class="absolute inset-0
+                 bg-[url('assets/images/image-bg.png')]
+                 bg-cover bg-center
+                 opacity-40"
+        ></div>
+      </div>
 
-      <!-- CONTENT WRAPPER -->
+      <!-- CONTENT -->
       <div class="relative z-10 max-w-7xl mx-auto px-8 py-24">
-        <!-- GRID -->
         <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
-          <!-- LEFT CONTENT -->
           <div>
             <div class="mb-6">
-              <img src="assets/images/reflectq-logo.png" class="w-20 h-20" />
+              <img
+                src="assets/images/reflectq-logo.png"
+                class="w-20 h-20"
+                alt="ReflectQ Logo"
+              />
             </div>
+
             <h1 class="text-4xl lg:text-5xl font-bold mb-6">ReflectQ</h1>
 
             <p
@@ -107,34 +112,32 @@
               <!-- GOOGLE PLAY -->
               <a
                 href="https://play.google.com/store/apps/details?id=com.reflectq.app"
-                class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md cursor-pointer select-none transition-all duration-300 ease-out hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
               >
                 <img
                   src="assets/icons/play.svg"
-                  class="h-6 pointer-events-none"
+                  class="h-6"
+                  alt="Google Play"
                 />
-
-                <span class="flex flex-col leading-tight text-left">
-                  <span class="text-[11px] text-gray-600"> Get it on </span>
-                  <span class="text-base font-semibold"> Google Play </span>
+                <span class="flex flex-col leading-tight">
+                  <span class="text-[11px] text-gray-600">Get it on</span>
+                  <span class="text-base font-semibold">Google Play</span>
                 </span>
               </a>
 
               <!-- APP STORE -->
               <a
                 href="#"
-                class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md cursor-pointer select-none transition-all duration-300 ease-out hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                class="group inline-flex items-center gap-3 bg-white/80 text-black px-7 py-3.5 rounded-full shadow-md transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
               >
                 <img
                   src="assets/icons/apple.svg"
-                  class="h-6 pointer-events-none"
+                  class="h-6"
+                  alt="App Store"
                 />
-
-                <span class="flex flex-col leading-tight text-left">
-                  <span class="text-[11px] text-gray-600">
-                    Download on the
-                  </span>
-                  <span class="text-base font-semibold"> App Store </span>
+                <span class="flex flex-col leading-tight">
+                  <span class="text-[11px] text-gray-600">Download on the</span>
+                  <span class="text-base font-semibold">App Store</span>
                 </span>
               </a>
             </div>
@@ -142,37 +145,38 @@
         </div>
       </div>
 
-      <!-- FLOATING LAYER  -->
+      <!-- FLOATING PHONES -->
       <div
-        class="relative translate-y-[-80px] sm:translate-y-[-60px] md:translate-y-[-40px] flex justify-center lg:absolute lg:right-24 lg:top-1/2 lg:-translate-y-[58%] z-30"
+        class="relative translate-y-[-80px] sm:translate-y-[-60px] md:translate-y-[-40px]
+               flex justify-center lg:absolute lg:right-24 lg:top-1/2
+               lg:-translate-y-[58%] z-30"
       >
         <div
-          class="relative flex flex-col items-center gap-8 lg:flex-row lg:items-end lg:gap-5 sm:gap-10 scale-90 sm:scale-95 lg:scale-100 lg:top-4"
+          class="relative flex flex-col items-center gap-8 lg:flex-row lg:items-end lg:gap-5 scale-90 sm:scale-95 lg:scale-100"
         >
-          <!-- PHONE KIRI -->
-          <div
-            class="relative w-[150px] sm:w-[210px] lg:w-[230px]"
-          >
-            <!-- NOTE -->
+          <div class="relative w-[150px] sm:w-[210px] lg:w-[230px]">
             <div
-              class="absolute -top-4 left-9 -translate-x-1/2 w-[190px] bg-[#2C3E50]/70 backdrop-blur-md rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] px-4 py-3 text-white text-sm z-40"
+              class="absolute -top-4 left-9 -translate-x-1/2 w-[190px]
+                     bg-[#2C3E50]/70 backdrop-blur-md rounded-xl
+                     shadow-lg px-4 py-3 text-white text-sm z-40"
             >
               <strong>ReflectQ</strong>
               <span class="block text-xs text-slate-300">
                 Connect with your feelings through the Qur’an.
               </span>
             </div>
-
             <img
               src="assets/images/display-1.png"
               class="w-full drop-shadow-2xl"
+              alt=""
             />
           </div>
-          <!-- PHONE KANAN -->
+
           <div class="relative w-[150px] sm:w-[210px] lg:w-[230px]">
-            <!-- NOTE -->
             <div
-              class="absolute -bottom-4 left-[170px] -translate-x-1/2 w-[190px] bg-[#2C3E50]/70 backdrop-blur-md rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] px-4 py-3 text-white text-sm z-40"
+              class="absolute -bottom-4 left-[170px] -translate-x-1/2 w-[190px]
+                     bg-[#2C3E50]/70 backdrop-blur-md rounded-xl
+                     shadow-lg px-4 py-3 text-white text-sm z-40"
             >
               <strong>Heart Reflection</strong>
               <span class="block text-xs text-slate-300">
@@ -182,457 +186,586 @@
             <img
               src="assets/images/display-2.png"
               class="w-full drop-shadow-2xl"
+              alt=""
             />
           </div>
         </div>
       </div>
 
       <!-- BOTTOM BAR -->
-<footer
-  class="fixed bottom-0 left-0 w-full
-         z-50
-         bg-[#50637D]/80 backdrop-blur-md
-         border-t border-white/10 rounded-t-3xl"
->
-  <div
-    class="mx-auto
-           max-w-7xl
-           px-4 sm:px-8
-           h-14 sm:h-16
-           flex items-center justify-between
-           text-white
-           pb-safe"
-  >
-    <p class="text-xs sm:text-sm font-bold opacity-90 truncate">
-      admin@reflectq.app
-    </p>
-    <div class="flex gap-5 sm:gap-8 text-sm sm:text-base">
-      <a href="#faq" class="hover:underline">FAQ</a>
-      <a href="#privacy" class="hover:underline">Privacy</a>
-      <a href="#terms" class="hover:underline">Terms</a>
-    </div>
-  </div>
-</footer>
+      <footer
+        class="fixed bottom-0 left-0 w-full z-50
+               bg-[#50637D]/80 backdrop-blur-md
+               border-t border-white/10 rounded-t-3xl"
+      >
+        <div
+          class="mx-auto max-w-7xl px-4 sm:px-8 h-14 sm:h-16
+                 flex items-center justify-between text-white pb-safe"
+        >
+          <p class="text-xs sm:text-sm font-bold truncate">
+            admin@reflectq.app
+          </p>
+          <div class="flex gap-5 sm:gap-8">
+            <a href="#faq" class="hover:underline">FAQ</a>
+            <a href="#privacy" class="hover:underline">Privacy</a>
+            <a href="#terms" class="hover:underline">Terms</a>
+          </div>
+        </div>
+      </footer>
     </section>
 
-    <!-- PRIVACY POLICE -->
+        <!-- ================= PRIVACY POLICY ================= -->
     <section
       id="privacy"
       class="page-section min-h-screen bg-slate-100 text-gray-800 py-24"
     >
       <div class="max-w-4xl mx-auto px-6 py-10">
-  <h2 class="text-2xl sm:text-3xl font-bold mb-8">
-    PRIVACY POLICY
-  </h2>
+        <h2 class="text-3xl font-bold mb-8">PRIVACY POLICY</h2>
+        <div class="space-y-10 text-base sm:text-lg leading-relaxed">
 
-  <div class="space-y-8 text-base sm:text-lg leading-relaxed">
+      <!-- 1 -->
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">1. INTRODUCTION</h3>
+        <p class="text-justify">
+          This Privacy Policy document explains how the ReflectQ application
+          (“Application”, “We”) collects, uses, stores, and protects Users'
+          personal data.
+        </p>
+        <p class="text-justify">
+          ReflectQ is developed and managed individually, not as part of a specific
+          organization or business entity. By accessing and using the ReflectQ
+          Application, Users are deemed to have read, understood, and agreed to all
+          the provisions in this Privacy Policy.
+        </p>
+      </section>
 
-    <!-- 1 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">1. INTRODUCTION</h3>
-      <p>
-        This Privacy Policy document explains how the ReflectQ application
-        (“Application”, “We”) collects, uses, stores, and protects Users'
-        personal data.
-      </p>
-      <p>
-        ReflectQ is developed and managed individually, not as part of a specific
-        organization or business entity. By accessing and using the ReflectQ
-        Application, Users are deemed to have read, understood, and agreed to all
-        the provisions in this Privacy Policy.
-      </p>
-    </section>
+      <section class="space-y-4">
+        <h3 class="text-lg sm:text-xl font-bold">
+          DATA & INFORMATION WE COLLECT
+        </h3>
 
-    <!-- 2 -->
-    <section class="space-y-4">
-      <h3 class="text-lg sm:text-xl font-bold">
-        2. DATA & INFORMATION WE COLLECT
-      </h3>
+        <p>
+          We collect certain data and information to provide, manage, and improve
+          the ReflectQ Application services.
+        </p>
 
-      <p>
-        We collect certain data and information to provide, manage, and improve
-        the ReflectQ Application services.
-      </p>
+        <!-- 1 -->
+        <div class="space-y-3">
+          <h4 class="font-semibold">1. INFORMATION YOU PROVIDE DIRECTLY</h4>
+          <p>We collect the following information when Users use the Application:</p>
 
-      <!-- 2.1 -->
-      <div class="space-y-3">
-        <h4 class="font-semibold text-base sm:text-lg">
-          2.1. INFORMATION YOU PROVIDE DIRECTLY
-        </h4>
-
-        <p>We collect the following information when Users use the Application:</p>
-
-        <div class="space-y-2">
           <p class="font-medium">a. Account Information</p>
-          <ul class="list-disc list-inside space-y-1">
+          <ul class="list-disc list-inside pl-4 space-y-1">
             <li>Email address</li>
             <li>Display name and/or full name</li>
             <li>Phone number</li>
             <li>Email and password for account authentication purposes</li>
             <li>
               Google account information (full account name, profile photo, email
-              address) if the User uses Google Sign-In
+              address), if the User uses the Google Sign-In feature
             </li>
           </ul>
-        </div>
 
-        <div class="space-y-2">
-          <p class="font-medium">b. Picture</p>
-          <ul class="list-disc list-inside">
-            <li>Profile photo uploaded by User</li>
+          <p class="font-medium mt-4">b. Picture</p>
+          <ul class="list-disc list-inside pl-4">
+            <li>Pictures uploaded by User</li>
           </ul>
-        </div>
 
-        <div class="space-y-2">
-          <p class="font-medium">c. Reflection session data</p>
-          <ul class="list-disc list-inside space-y-1">
+          <p class="font-medium mt-4">c. Reflection Session Data</p>
+          <ul class="list-disc list-inside pl-4 space-y-1">
             <li>Mood data</li>
-            <li>Qur'an verses</li>
-            <li>Personal reflections and inspirations</li>
+            <li>Qur’an verses</li>
+            <li>Personal reflections and inspirations voluntarily entered by Users</li>
             <li>Relevant prayer data</li>
             <li>Personal affirmations</li>
           </ul>
         </div>
-      </div>
 
-      <!-- 2.2 -->
-      <div class="space-y-3">
-        <h4 class="font-semibold text-base sm:text-lg">
-          2.2. AUTOMATICALLY COLLECTED INFORMATION
-        </h4>
+        <!-- 2 -->
+        <div class="space-y-3">
+          <h4 class="font-semibold">
+            2. AUTOMATICALLY COLLECTED INFORMATION
+          </h4>
+          <p>When Users access the Application, we may automatically collect certain information, including:</p>
+          <p class="font-medium">a. Usage Data</p>
+          <ul class="list-disc list-inside pl-4 space-y-1">
+            <li>Frequency of application use</li>
+            <li>Interaction with Application features</li>
+          </ul>
 
-        <p class="font-medium">a. Usage Data</p>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Frequency of application use</li>
-          <li>Interaction with Application features</li>
+          <p class="font-medium mt-4">
+            b. Transaction Data and Virtual Currency (CoinQ)
+          </p>
+          <p class="text-justify">
+            ReflectQ provides a virtual currency feature (CoinQ) that can be used to access AI-based features within the Application. Users can obtain CoinQ through purchases using In-App Purchase (IAP) processed by Apple Pay. In the coin purchase process:
+          </p>
+
+          <ul class="list-disc list-inside pl-4 space-y-1">
+            <li>All payment transactions are processed securely by Apple.</li>
+            <li>We do not collect, store, or process sensitive payment data such as credit card numbers, bank account information, or other billing data.</li>
+            <li>The information we receive is limited to the transaction status, the amount of CoinQ purchased, and the transaction time for record-keeping and service provision purposes.</li>
+          </ul>
+
+          <p class="text-justify">
+            The purchase price of CoinQ is displayed in USD and will be automatically adjusted by the Apple payment system based on the User's Apple ID region.
+          </p>
+        </div>
+
+        <!-- 2.3 -->
+        <div class="space-y-3">
+          <h4 class="font-semibold">
+            3. DEVICE ACCESS PERMISSION
+          </h4>
+          <p>To support certain functions, ReflectQ may request device access permissions as follows:</p>
+          <p class="font-medium">a. Calendar</p>
+          <p class="text-justify">
+            Used to support automatic reflection reminders. ReflectQ does not read,
+            modify, or store calendar contents other than creating reminder entries.
+          </p>
+
+          <p class="font-medium mt-4">b. Camera</p>
+          <p class="text-justify">
+            ReflectQ may request camera access permission on the User's device to support certain features within the Application. Camera access is used in a limited and contextual manner, namely to allow Users to take pictures directly through the device's camera as part of the poster creation feature.<br><br>
+            Camera access is only used when the User actively chooses to use the feature and is not done automatically or run in the background. Images taken through the camera will be stored in the ReflectQ system. ReflectQ does not access the camera without the User's consent and does not use the image data taken for purposes other than providing the App's features. Users can change or revoke camera access permissions at any time through their device settings.
+          </p>
+
+          <p class="font-medium mt-4">c. Media Access</p>
+          <p>This access allows Users to select images from their device gallery for:</p>
+          <ul class="list-disc list-inside pl-4 space-y-1">
+            <li>Profile photo</li>
+            <li>Inspirational poster creation</li>
+          </ul>
+          <p>The application only accesses images explicitly selected by the User and does not scan or access the entire gallery. Selected images will be securely uploaded to the ReflectQ server.</p>
+
+          <p class="font-medium mt-4">d. Notification</p>
+          <p class="text-justify">
+            The ReflectQ app has a push notification feature to deliver relevant and important information related to service usage, including notifications about reflection schedules related to user experiences. The delivery of these push notifications aims to ensure that users receive information in a timely and efficient manner.<br><br>In its implementation, we utilize the Firebase Cloud Messaging (FCM) service, which is integrated with the Apple Push Notification Service (APNs), to enable the secure delivery of notifications to users' iOS devices. This process uses a technical device identifier, namely a push notification token, which serves solely for the purpose of delivering notifications and managing services. This identifier is technical in nature, may change over time, and is not used and cannot be used to personally identify users.<br><br>We do not collect, store, or process users' personal data in connection with the delivery of these push notifications. Users have full control over this feature and can grant or revoke permission to receive push notifications at any time through the settings on their respective iOS devices.
+          </p>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          PURPOSE OF DATA USE
+        </h3>
+        <p>The data and information collected are used for the following purposes:</p>
+        <ul class="list-decimal list-inside pl-4 space-y-1">
+          <li>To provide and operate the main features of the Application optimally.</li>
+          <li>To customize the user experience based on preferences and activities.</li>
+          <li>Sending reflection reminder notifications.</li>
+          <li>Maintaining account security and preventing misuse or unauthorized access.</li>
+          <li>Managing coin balances, transaction histories, and access to paid features within the Application.</li>
         </ul>
-
-        <p class="font-medium mt-4">
-          b. Transaction Data and Virtual Currency (CoinQ)
-        </p>
         <p>
-          ReflectQ provides a virtual currency feature (CoinQ) that can be used to
-          access AI-based features within the Application.
+          We do not use Users' personal data for third-party advertising or cross-application tracking purposes. 
         </p>
+      </section>
 
-        <ul class="list-disc list-inside space-y-1">
-          <li>All payment transactions are processed securely by Apple</li>
-          <li>No sensitive payment data is collected or stored by ReflectQ</li>
-          <li>
-            Transaction status, amount, and time are stored for service purposes
-          </li>
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          PURPOSE OF DATA USE
+        </h3>
+        <p>
+          We implement reasonable security measures that are in line with industry standards, including:
+        </p>
+        <ul class="list-decimal list-inside pl-4 space-y-1">
+          <li>Data encryption</li>
+          <li>Restricted access control</li>
         </ul>
+        <p class="text-justify">For transaction purposes within the application, we collaborate with Apple as a payment service provider. Apple processes all payment data in accordance with the privacy policy and terms and conditions applicable on the Apple platform.<br><br>User Data is stored and managed using third-party services that assist in the operation of the Application, such as Supabase and Firebase.</p>
+      </section>
 
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          DATA STORAGE & SECURITY
+        </h3>
+        <p class="text-justify">ReflectQ implements reasonable technical and organizational security measures in accordance with industry standards to protect Users' personal data from unauthorized access, use, disclosure, alteration, or destruction. These security measures include data encryption, access rights restrictions based on operational needs, and controlled system management.<br><br>User personal data sent through the Application is protected by an encryption mechanism during transmission (encrypted in transit), which is a data security process when data is transmitted from the User's device to the ReflectQ system or third-party service providers used. This encryption aims to prevent access or interception by unauthorized parties during the data transmission process through the network.<br><br>User Data is stored and managed using third-party services that support the Application's operations. ReflectQ ensures that these third-party service providers implement adequate security and data protection standards. Nevertheless, ReflectQ continues to exercise reasonable oversight to maintain the security and confidentiality of User personal data in accordance with applicable laws and regulations.</p>
+      </section>
+      
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          USER RIGHTS REGARDING PERSONAL DATA
+        </h3>
         <p>
-          The purchase price of CoinQ is displayed in USD and adjusted automatically
-          based on the User’s Apple ID region.
+          In accordance with the provisions of Law of the Republic of Indonesia Number 27 of 2022 concerning Personal Data Protection (PDP Law), Users as Subjects of Personal Data have the following rights:
         </p>
-      </div>
-    </section>
+        <p class="font-medium mt-4">1. Right to Information</p>
+        <p class="text-justify">Users have the right to obtain information regarding the clarity of identity, legal basis, purpose of request and use of Personal Data, as well as the accountability of ReflectQ as the party collecting Personal Data.</p>
+        <p class="font-medium mt-4">2. Data Access and Correction Rights</p>
+        <p class="text-justify">Users have the right to access personal data stored and processed by ReflectQ, including account information and other data related to the use of the Application. Access to such personal data can be done through features available in the Application. In addition, Users have the right to update, correct, or complete inaccurate or incomplete personal data through the account settings available in the Application.</p>
+        <p class="font-medium mt-4">3. Right to Withdraw Consent</p>
+        <p class="text-justify">Users have the right to withdraw their consent to the processing of certain personal data that they have previously provided to ReflectQ. Withdrawal of consent only applies to the processing of personal data based on the User's consent and does not apply to processing that is necessary for the fulfillment of legal obligations or the provision of the Application's main services.<br><br>Withdrawal of consent can be done through the Application's permission settings. Once the withdrawal of consent has been processed, ReflectQ will stop processing personal data related to that purpose. Withdrawal of consent does not apply to data processing that has been carried out legally prior to the withdrawal. Withdrawal of consent will result in the limitation or unavailability of certain features in the Application.</p>
+        <p class="font-medium mt-4">4. Right to Erase Personal Data</p>
+        <p class="text-justify">Users have the right to request the deletion of personal data related to their accounts in accordance with applicable laws and regulations. Requests for the deletion of personal data can be submitted through the feature available in the Application or through ReflectQ's official communication channels.<br><br>Once the request is received, ReflectQ will verify and process the deletion of the User's personal data within a reasonable period of time in accordance with internal policies and applicable laws. The deletion of personal data will result in the User no longer being able to access or use the Application's services.<br><br>Under certain circumstances, some personal data may be stored on a limited and temporary basis even if a request for deletion has been submitted, as long as such storage is necessary for the fulfillment of legal obligations, security interests, and system audits, as stipulated in applicable laws and regulations.</p>
+        <p class="font-medium mt-4">5. Right to Object and Restrict Processing</p>
+        <p class="text-justify">Users have the right to object to the processing of certain personal data or request restrictions on the processing of personal data under certain conditions as stipulated in applicable laws and regulations. Requests for objection or restrictions on processing can be submitted through the official ReflectQ channel. Each request will be verified and evaluated to ensure its compliance with the applicable legal basis for data processing.<br><br>If the request is approved, ReflectQ will restrict or stop processing the relevant personal data in accordance with the scope of the request. If the request cannot be fulfilled, ReflectQ will provide the User with an explanation of the reasons for the refusal, including if the data processing is necessary for the fulfillment of legal obligations, security interests, or the provision of the Application's main services.</p>
+      </section>
 
-    <!-- 3 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        3. PURPOSE OF DATA USE
-      </h3>
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          ACCOUNT AND PERSONAL DATA DELETION
+        </h3>
+        <p>
+          Users have the right to request the deletion of their account and personal data associated with that account.
+        </p>
+        <p class="font-medium mt-4">1. Account Deletion</p>
+        <p class="text-justify">Users can request account deletion through the “Delete Account” feature available in the Application, or by contacting the ReflectQ Admin via the official email address or WhatsApp communication channel listed. Once the account deletion process is complete, Users will no longer have access to use the Application services with the account in question.</p>
+        <p class="font-medium mt-4">2. Confirmation of Deletion</p>
+        <p class="text-justify">ReflectQ will send a confirmation to the User via a notification (pop-up) when the user selects this feature, before the account deletion request is processed. If the User intends to request account recovery after the deletion has been processed, the User can contact the ReflectQ support team via email or the official WhatsApp number listed in the Application.</p>
+        <p class="font-medium mt-4">3. Deletion of Personal Data</p>
+        <p class="text-justify">Account deletion will result in the deletion of the User's personal data associated with that account, including:.</p>
+        <ul class="list-inside pl-4 space-y-1">
+          <li>a. User authentication data and account information</li>
+          <li>b. User reflection data and history</li>
+          <li>c. Transaction history and CoinQ conversion history</li>
+          <li>d. The User's CoinQ and PointQ balance</li>
+          <li>e. Information about the device used by the User</li>
+          <li>f. The User's subscription data</li>
+          <li>g. The User's notification data</li>
+          <li>h. The User's referral data</li>
+          <li>i. Information about the device registered to the User's account</li>
+          <li>j. The User's application feature usage log.</li>
+        </ul>
+        <p class="text-justify">All User data will be automatically deleted within a maximum period of 30 (thirty) days from the date of the account deletion request. This temporary storage is carried out solely for legitimate and justified purposes, including to fulfill legal obligations and applicable laws and regulations, handle or resolve disputes, complaints, or alleged misuse of services, and maintain system security and audit interests, including the prevention of unauthorized activities and verification of service integrity. After this period ends and there are no legitimate obligations or requirements, User Data will be permanently deleted from the ReflectQ system.</p>
+      </section>
 
-      <ul class="list-disc list-inside space-y-1">
-        <li>Providing and operating Application features</li>
-        <li>Customizing User experience</li>
-        <li>Sending reflection reminders</li>
-        <li>Maintaining account security</li>
-        <li>Managing CoinQ and paid features</li>
-      </ul>
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          THIRD-PARTY SERVICES
+        </h3>
+        <p>
+          In order to provide and operate the Application services optimally, ReflectQ uses certain third-party services that support the Application's features and operations. The use of these third-party services is limited and tailored to the Application's functional needs.
+        </p>
+        <p class="font-medium mt-4">1. Supabase</p>
+        <p class="text-justify">Used as a database and storage service to store User account information, reflection data, and other data necessary for the provision of Application services.</p>
+        <p class="font-medium mt-4">2. Google Firebase</p>
+        <p class="text-justify">Used to support push notification services, Application usage analytics, and improve service stability and reliability.</p>
+        <p class="font-medium mt-4">3. EQuran</p>
+        <p class="text-justify">Used to provide Qur'an verse recommendations relevant to the User's reflection content within the Application.</p>
+        <p class="font-medium mt-4">4. OpenAI</p>
+        <p class="text-justify">Used to support artificial intelligence (AI)-based features, including but not limited to reflection text analysis, summary generation, and providing personalized content recommendations. Data processed through this service is limited according to feature needs and is not used by ReflectQ for other purposes outside the provision of Application services.</p>
+        <p class="font-medium mt-4">5. Gemini AI</p>
+        <p class="text-justify">Used as an additional artificial intelligence service to support content processing, recommendations, and quality improvement of AI-based features within the Application.</p>
+        <p class="font-medium mt-4">6. Apple Store In-App Payments</p>
+        <p class="text-justify">For transaction purposes within the Application, ReflectQ collaborates with Apple as a payment service provider. All payment data processing, including card information or other payment methods, is carried out directly by Apple in accordance with Apple's privacy policy, security standards, and applicable terms on the Apple platform. ReflectQ does not store or process User payment data directly.</p>
+        <p class="text-justify">ReflectQ ensures that the third parties used have their own privacy policies with adequate data security standards. We do not sell, rent, or trade Users' personal data to other parties for commercial purposes. Information will only be shared with third parties for the operation of the Application and based on applicable legal provisions.</p>
+      </section>
 
-      <p>
-        ReflectQ does not use Users’ personal data for third-party advertising
-        or cross-application tracking.
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          POLICY CHANGES
+        </h3>
+        <p>
+          ReflectQ may update or change this Privacy Policy from time to time to adapt to service developments, changes to the Application's features, or applicable laws and regulations. Any material changes will be notified to Users through updates to the Application and/or through the Privacy Policy page available in the Application.<br><br>Users are advised to review this Privacy Policy periodically to stay informed about how ReflectQ manages and protects Users' personal data. By continuing to use the Application after changes have been implemented, Users are deemed to have understood and agreed to the updated Privacy Policy.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h3 class="text-lg sm:text-xl font-bold">
+          9. CONTACT US
+        </h3>
+        <p class="text-justify">If the User has questions, requests related to access, correction, updating, or deletion of personal data, as well as other questions related to this Privacy Policy or the use of the ReflectQ Application, the User can contact Us through the following official communication channels:</p>
+        <ul class="list-disc list-inside pl-4 space-y-1">
+          <li>Email: admin@reflectq.app</li>
+          <li>Phone: +62-877-7576-3231</li>
+          <li>Website: app.reflectq.org</li>
+        </ul>
+      </section>
+
+      <p class="text-center text-sm opacity-70 pt-8">
+        Version 2.0.0
       </p>
-    </section>
-
-    <!-- Footer -->
-    <p class="text-center text-sm opacity-70 pt-8">
-      Version 2.0.0
-    </p>
+    </div>
   </div>
-</div>
-
-      <!-- BACK BUTTON -->
-  <a href="#hero"
-     class="fixed bottom-5 right-5
-          sm:bottom-6 sm:right-6
-          z-50
-          flex items-center justify-center
-          w-12 h-12 sm:w-14 sm:h-14
-          rounded-full
-          bg-gray-800 text-white
-          shadow-xl
-          hover:bg-gray-500
-          active:scale-95
-          transition">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-6 h-6"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor"
-         stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15 19l-7-7 7-7" />
-    </svg>
-  </a>
+      <!-- BACK TO HERO BUTTON -->
+<a
+  href="#hero"
+  class="fixed bottom-5 right-5
+         sm:bottom-6 sm:right-6
+         z-50
+         flex items-center justify-center
+         w-12 h-12 sm:w-14 sm:h-14
+         rounded-full
+         bg-gray-800 text-white
+         shadow-xl
+         hover:bg-gray-500
+         active:scale-95
+         transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M15 19l-7-7 7-7"
+    />
+  </svg>
+</a>
     </section>
 
-    <!-- TERMS OF SERVICE -->
+    <!-- ================= TERMS OF SERVICE ================= -->
     <section
-      id="terms"
-      class="page-section min-h-screen bg-slate-100 text-gray-800 py-24"
-    >
-      <div class="max-w-4xl mx-auto px-6 py-10">
-  <h2 class="text-2xl sm:text-3xl font-bold mb-8">
-    USER TERMS AND CONDITIONS
-  </h2>
+  id="terms"
+  class="page-section min-h-screen bg-slate-100 text-gray-800 py-24"
+>
+  <div class="max-w-4xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-bold mb-8">TERMS AND CONDITIONS USER</h2>
 
-  <div class="space-y-8 text-base sm:text-lg leading-relaxed">
+    <div class="space-y-8 leading-relaxed">
 
-    <!-- 1 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">1. INTRODUCTION</h3>
-      <p>
-        These User Terms and Conditions ("Terms") govern the access and use of
-        the ReflectQ application ("Application", "We") by users ("User", "You").
-      </p>
-      <p>
-        ReflectQ is developed and managed individually. By downloading,
-        accessing, or using the Application, the User confirms that they have
-        read, understood, and agreed to these Terms.
-      </p>
-      <p>
-        If the User does not agree, the User is advised not to use the
-        Application.
-      </p>
-    </section>
+      <!-- 1. INTRODUCTION -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">1. INTRODUCTION</h3>
+        <p class="text-justify">
+          These User Terms and Conditions ("Terms") govern the access and use of the ReflectQ application ("Application," "We") by users ("User," "You").<br><br>ReflectQ is developed and managed individually. By downloading, accessing, or using the Application, the User declares that they have read, understood, and agreed to all of these Terms. If the User does not agree to these Terms, the User is advised not to use the Application.</p>
+      </section>
 
-    <!-- 2 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">2. USER ACCOUNT</h3>
-      <p>
-        To access certain features, Users must create an account by providing
-        accurate and up-to-date information. Users are fully responsible for:
-      </p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Maintaining the confidentiality of account information and passwords</li>
-        <li>All activities conducted under their account</li>
-      </ul>
-      <p>
-        Login may be performed using email and password or Google Account
-        (Google Sign-In). ReflectQ reserves the right to suspend or deactivate
-        accounts that violate these Terms or applicable laws.
-      </p>
-    </section>
+      <!-- 2. USER ACCOUNT -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">2. USER ACCOUNT</h3>
+        <p class="text-justify">
+          To use certain features, the User is required to create an account by providing accurate and up-to-date information. The User is fully responsible for:
+        </p>
+        <ul class="list-inside space-y-1 pl-4 mt-2">
+          <li>a. The confidentiality of account information and passwords</li>
+          <li>b. All activities that occur within their account</li>
+        </ul>
+        <p class="text-justify mt-2">
+          Login can be done via Email and password, or Google Account (Google Sign-In). We reserve the right to suspend or deactivate the User's account if a violation of these Terms or applicable laws and regulations is found.
+        </p>
+      </section>
 
-    <!-- 3 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">3. APPLICATION USE</h3>
-      <p>Users agree to use the Application:</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>For personal and lawful purposes only</li>
-        <li>In compliance with applicable laws and regulations</li>
-      </ul>
+      <!-- 3. APPLICATION USE -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">3. APPLICATION USE</h3>
+        <p class="text-justify">The User agrees to use the Application</p>
+        <ul class="list-inside space-y-1 pl-4 mt-2">
+          <li>a. Only for personal and lawful purposes</li>
+          <li>b. In accordance with applicable laws and regulations</li>
+        </ul>
+        <p>The User is prohibited from:</p>
+        <ul class="list-inside space-y-1 pl-4 mt-2">
+          <li>a. Misusing Application features</li>
+          <li>b. Taking actions that harm the Application or other Users</li>
+          <li>c. Accessing or attempting to access the system unlawfully</li>
+          <li>d. Using the Application for illegal activities or violating applicable norms.</li>
+        </ul>
+      </section>
 
-      <p class="mt-4">Users are prohibited from:</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Misusing Application features</li>
-        <li>Performing actions that harm the Application or other Users</li>
-        <li>Accessing or attempting to access the system unlawfully</li>
-        <li>Using the Application for illegal activities</li>
-      </ul>
-    </section>
+      <!-- 4. PAID FEATURES & COINQ -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">
+          4. PAID FEATURES AND VIRTUAL CURRENCY (COINQ)
+        </h3>
+        <p class="text-justify">
+          ReflectQ provides a premium subscription feature that is processed entirely through the Apple In-App Purchase system and is subject to auto-renewal. Users can stop the subscription at any time by selecting the “Cancel Subscription” option through the Apple ID account settings. Once cancelled, the premium subscription feature will remain usable until the end of the paid subscription period, and auto-renewal will be disabled for the next period. Subscription fees that have been paid for the current period are non-refundable, including if the User stops the subscription before the subscription period ends, unless otherwise determined by Apple's policy.<br><br>
+          ReflectQ does not store sensitive payment information such as the User's credit card number or bank account details. The transaction information we receive is limited to the subscription status (active/inactive) and transaction history required for record-keeping, customer service, and legal compliance purposes.<br><br>
+          ReflectQ provides a virtual currency ("CoinQ") that is used as an internal medium of exchange to access certain features within the Application. Users are given an initial balance of 150 CoinQ and 500 PoinQ when first creating an account. The use of CoinQ will be charged according to the type of feature used, with the following provisions:
+        </p>
 
-    <!-- 4 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        4. PAID FEATURES & VIRTUAL CURRENCY (COINQ)
-      </h3>
-      <p>
-        ReflectQ offers premium subscription features processed exclusively
-        through Apple In-App Purchase and subject to auto-renewal. Users may
-        cancel the subscription at any time via Apple ID settings.
-      </p>
-      <p>
-        Subscription fees are non-refundable unless otherwise determined by
-        Apple policies.
-      </p>
-      <p>
-        ReflectQ does not store sensitive payment information. Transaction data
-        received is limited to subscription status and transaction history.
-      </p>
-      <p>
-        ReflectQ provides a virtual currency called <strong>CoinQ</strong> for
-        internal use. Users receive an initial balance of 150 CoinQ and 500
-        PoinQ upon account creation.
-      </p>
-      <p>
-        CoinQ is not legal tender, has no real monetary value, and cannot be
-        transferred or cashed out.
-      </p>
-    </section>
+        <!-- CoinQ Table -->
+        <div class="overflow-x-auto mt-4">
+          <p class="text-center">Table 1. CoinQ Usage</p>
+          <table class="w-full border-2 border-gray-300 text-sm">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="border px-3 py-2 text-center">Feature</th>
+                <th class="border px-3 py-2 text-center">Description</th>
+                <th class="border px-3 py-2 text-center">CoinQ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border px-3 py-2">HD Poster Resolution</td><td class="border px-3 py-2">Upgrade poster to HD (720p+)</td><td class="border px-3 py-2 text-center">40</td></tr>
+              <tr><td class="border px-3 py-2">Remove Watermark</td><td class="border px-3 py-2">Remove watermark from poster</td><td class="border px-3 py-2 text-center">100</td></tr>
+              <tr><td class="border px-3 py-2">AI Summary</td><td class="border px-3 py-2">Generate AI summary of your reflection</td><td class="border px-3 py-2 text-center">40</td></tr>
+              <tr><td class="border px-3 py-2">Generate Questions</td><td class="border px-3 py-2">AI generates reflection questions</td><td class="border px-3 py-2 text-center">10</td></tr>
+              <tr><td class="border px-3 py-2">4K Poster Resolution</td><td class="border px-3 py-2">Upgrade poster to 4K resolution (2160p) - Ultra Quality</td><td class="border px-3 py-2 text-center">50</td></tr>
+              <tr><td class="border px-3 py-2">Affirmation Poster</td><td class="border px-3 py-2">Generate a beautiful affirmation poster</td><td class="border px-3 py-2 text-center">40</td></tr>
+              <tr><td class="border px-3 py-2">AI Content Generation</td><td class="border px-3 py-2">Generate AI-powered content for reflections and insights</td><td class="border px-3 py-2 text-center">50</td></tr>
+              <tr><td class="border px-3 py-2">Ayah Relevance Check</td><td class="border px-3 py-2">Check the relevance of the selected ayah</td><td class="border px-3 py-2 text-center">25</td></tr>
+              <tr><td class="border px-3 py-2">Generate Examples</td><td class="border px-3 py-2">AI generates practical examples</td><td class="border px-3 py-2 text-center">25</td></tr>
+              <tr><td class="border px-3 py-2">FHD Poster Resolution</td><td class="border px-3 py-2">Upgrade poster to FHD resolution (1080p)</td><td class="border px-3 py-2 text-center">45</td></tr>
+              <tr><td class="border px-3 py-2">Quranic Insight Video</td><td class="border px-3 py-2">Premium: Get a personalized Quranic insight video</td><td class="border px-3 py-2 text-center">450</td></tr>
+              <tr><td class="border px-3 py-2">360p Poster Resolution</td><td class="border px-3 py-2">Download poster in 360p resolution (Low quality)</td><td class="border px-3 py-2 text-center">30</td></tr>
+              <tr><td class="border px-3 py-2">Generate Keywords</td><td class="border px-3 py-2">AI generates relevant keywords from ayah</td><td class="border px-3 py-2 text-center">15</td></tr>
+              <tr><td class="border px-3 py-2">Generate Ayah</td><td class="border px-3 py-2">AI generates relevant Quranic verses based on your reflection</td><td class="border px-3 py-2 text-center">25</td></tr>
+              <tr><td class="border px-3 py-2">AI Image Generation</td><td class="border px-3 py-2">Generate a custom AI image</td><td class="border px-3 py-2 text-center">200</td></tr>
+              <tr><td class="border px-3 py-2">Generate Action Plan</td><td class="border px-3 py-2">AI generates actionable steps based on reflection</td><td class="border px-3 py-2 text-center">25</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-    <!-- 5 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        5. PURCHASE & PAYMENT OF COINQ
-      </h3>
-      <p>
-        CoinQ purchases are processed via Apple In-App Purchase (IAP). ReflectQ
-        does not collect or store billing data.
+        <p class="text-justify mt-4">
+          CoinQ is not a legal tender, has no real monetary value, and cannot be cashed out, transferred, or exchanged for cash in any form. CoinQ can only be used within the ReflectQ Application according to the functions provided. The amount of CoinQ owned by the User will be recorded in the User's account.
+        </p>
+      </section>
+
+      <!-- 5. PURCHASE -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">5. PURCHASE AND PAYMENT OF COINQ</h3>
+        <p class="text-justify">
+          CoinQ purchases are made through In-App Purchase (IAP), which is fully processed by Apple Pay. We do not collect, store, or process User payment data, including credit card information or other billing data. The price of CoinQ is displayed in US Dollars and will be adjusted by the Apple system based on the User's Apple ID region.<br><br>All payment, cancellation, and refund policies follow Apple's terms and policies. We do not have the authority to process refunds directly outside of the mechanism provided by Apple.
+        </p>
+      </section>
+
+      <!-- 6. REWARD -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">6. POINQ AND COINQ REWARD</h3>
+        <p class="text-justify">
+          Users can earn rewards in the form of PoinQ and CoinQ when performing or completing certain actions within the application. Details of the actions and the rewards obtained are as follows:</p>
+        <div class="overflow-x-auto">
+          <p class="text-center">Table 2. CoinQ dan PoinQ Earning</p>
+          <table class="w-full border-2 border-gray-300 text-sm">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="border px-3 py-2 text-center">Action</th>
+                <th class="border px-3 py-2 text-center">PoinQ Earning</th>
+                <th class="border px-3 py-2 text-center">CoinQ Earning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border px-3 py-2">Share Ayah</td><td class="border px-3 py-2 text-center">100</td><td class="border px-3 py-2 text-center">50</td></tr>
+              <tr><td class="border px-3 py-2">Share Inspiration/Dua Poster</td><td class="border px-3 py-2 text-center">100</td><td class="border px-3 py-2 text-center">50</td></tr>
+              <tr><td class="border px-3 py-2">Complete Daily Reflection</td><td class="border px-3 py-2 text-center">500</td><td class="border px-3 py-2 text-center">100</td></tr>
+              <tr><td class="border px-3 py-2">Complete Deep Reflection</td><td class="border px-3 py-2 text-center">750</td><td class="border px-3 py-2 text-center">100</td></tr>
+              <tr><td class="border px-3 py-2">Referral Code Used/Person</td><td class="border px-3 py-2 text-center">1500</td><td class="border px-3 py-2 text-center">500</td></tr>
+              <tr><td class="border px-3 py-2">Complete Mission: Rate Application</td><td class="border px-3 py-2 text-center">1000</td><td class="border px-3 py-2 text-center">100</td></tr>
+              <tr><td class="border px-3 py-2">Complete Mission: Complete Profile</td><td class="border px-3 py-2 text-center">100</td><td class="border px-3 py-2 text-center">100</td></tr>
+              <tr><td class="border px-3 py-2">CReflection Milestone 7 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+              <tr><td class="border px-3 py-2">Reflection Milestone 14 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+              <tr><td class="border px-3 py-2">Reflection Milestone 21 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+              <tr><td class="border px-3 py-2">Reflection Milestone 30 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+              <tr><td class="border px-3 py-2">Reflection Milestone 90 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+              <tr><td class="border px-3 py-2">Reflection Milestone 180 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+              <tr><td class="border px-3 py-2">Reflection Milestone 365 Days</td><td class="border px-3 py-2 text-center">3000</td><td class="border px-3 py-2 text-center">-</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 7. INTELLECTUAL PROPERTY -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">7. FEATURE AND PRICE CHANGES</h3>
+        <p class="text-justify">
+          We reserve the right, at any time and without prior notice, to:</p>
+          <ul class="list-inside pl-4 space-y-1">
+            <li>a. Add, modify, or discontinue Application features</li>
+            <li>b. Change the mechanism for using CoinQ</li>
+            <li>c. Adjust prices or coin packages according to platform policy</li>
+          </ul>
+          <p class="text-center">These changes will take effect from the moment they are displayed or applied within the Application.</p>
+      </section>
+
+      <!-- 8. TERMINATION -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">8. TERMINATION OF SERVICE AND ACCOUNT</h3>
+        <p class="text-justify">We reserve the right to temporarily or permanently terminate the Application service, either partially or wholly. We may deactivate or delete a User's account if:
+        </p>
+        <ul class="list-inside pl-4 space-y-1">
+            <li>a. The User violates these terms and conditions</li>
+            <li>b. It is necessary for security or legal purposes</li>
+            <li>c. In the event the account is deleted, the remaining Coins held by the User cannot be refunded or cashed out.</li>
+          </ul>
+      </section>
+
+      <!-- 9. LIMITATION -->
+      <section>
+        <h3 class="font-bold text-xl mb-2">9. LIMITATION OF LIABILITY</h3>
+        <p class="text-justify">
+          The ReflectQ Application is provided as is. We strive to provide the best service, but we cannot guarantee that the Application will always run without disruption. We are not responsible for technical interruptions, third-party system failures, or indirect losses arising from conditions beyond our control.
+        </p>
+      </section>
+
+      <!-- 10. -->
+       <section>
+        <h3 class="font-bold text-xl mb-2">10. CHANGES TO TERMS AND CONDITIONS</h3>
+        <p class="text-justify">
+          We may update these Terms from time to time. Changes will be effective from the time they are published on the Application or other official media. Continued use of the Application after changes is deemed as the User's agreement to the updated Terms.
+        </p>
+      </section>
+
+      <!-- 11. -->
+       <section>
+        <h3 class="font-bold text-xl mb-2">11. GOVERNING LAW</h3>
+        <p class="text-justify">
+          These Terms and Conditions shall be governed by, construed, and enforced entirely in accordance with the laws of the Republic of Indonesia. In the event of any dispute, conflict, or difference in interpretation arising out of or in connection with the use of the ReflectQ Application, the User and we agree to first attempt to resolve the matter through mutual consultation for consensus within a period of 30 (thirty) calendar days from the date the dispute arises. If the dispute cannot be resolved through consultation, then any legal claim or dispute arising shall be settled through the permanent legal domicile, without prejudice to our right to file a claim in any court that has jurisdiction over the User.
+        </p>
+      </section>
+
+      <!-- 12. -->
+       <section>
+        <h3 class="font-bold text-xl mb-2">12. PRIVACY POLICY</h3>
+        <p class="text-justify">
+          We highly value your privacy and are committed to protecting the Personal Data you provide through the ReflectQ Application. Provisions regarding the collection, use, storage, and protection of data are regulated in more detail in our Privacy Policy document, which is an integral part of these Terms and Conditions. By using the Application, the User agrees that we may process your information in accordance with the applicable personal data protection laws in the Republic of Indonesia.
+        </p>
+      </section>
+
+      <!-- 13. -->
+       <section>
+        <h3 class="font-bold text-xl mb-2">13. OUR CONTACTS</h3>
+        <p class="text-justify">
+          If the User has any questions, requests regarding access, correction, update, or deletion of personal data, as well as other questions related to this Privacy Policy or the use of the ReflectQ Application, the User can contact Us through the following official communication channels:
+        </p>
+        <ul class="list-inside pl-4 space-y-1">
+            <li>a. Email: admin@reflectq.app</li>
+            <li>b. Phone number: +62-877-7576-3231</li>
+            <li>c. Website: app.reflectq.org</li>
+          </ul>
+      </section>
+
+      <p class="text-sm text-center opacity-70 pt-8">
+        Version 2.0.0
       </p>
-      <p>
-        Prices are displayed in USD and adjusted automatically by Apple based
-        on the User’s region.
-      </p>
-    </section>
-
-    <!-- 6 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        6. POINQ & COINQ REWARD SYSTEM
-      </h3>
-      <p>
-        Users may earn PoinQ and CoinQ by completing specific actions within the
-        Application. Reward mechanisms may be updated periodically.
-      </p>
-      <p>
-        ReflectQ reserves the right to modify reward systems without prior
-        notice.
-      </p>
-    </section>
-
-    <!-- 7 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        7. FEATURE & PRICE CHANGES
-      </h3>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Add, modify, or discontinue Application features</li>
-        <li>Change CoinQ usage mechanisms</li>
-        <li>Adjust prices in accordance with platform policies</li>
-      </ul>
-      <p>Changes take effect once displayed within the Application.</p>
-    </section>
-
-    <!-- 8–14 -->
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        8. INTELLECTUAL PROPERTY RIGHTS
-      </h3>
-      <p>
-        All content and materials within the Application are protected by
-        applicable laws. Unauthorized use is prohibited.
-      </p>
-    </section>
-
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        9. TERMINATION OF SERVICE & ACCOUNT
-      </h3>
-      <p>
-        ReflectQ may suspend or terminate services for violations, security
-        reasons, or legal obligations.
-      </p>
-      <p>Remaining CoinQ balances are non-refundable.</p>
-    </section>
-
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        10. LIMITATION OF LIABILITY
-      </h3>
-      <p>
-        The Application is provided “as is” without guarantees of uninterrupted
-        service.
-      </p>
-    </section>
-
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        11. CHANGES TO TERMS
-      </h3>
-      <p>
-        Continued use of the Application constitutes acceptance of updated
-        Terms.
-      </p>
-    </section>
-
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        12. GOVERNING LAW
-      </h3>
-      <p>
-        These Terms are governed by the laws of the Republic of Indonesia.
-      </p>
-    </section>
-
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        13. PRIVACY POLICY
-      </h3>
-      <p>
-        Personal data processing is governed by the Privacy Policy.
-      </p>
-    </section>
-
-    <section class="space-y-3">
-      <h3 class="text-lg sm:text-xl font-bold">
-        14. CONTACT US
-      </h3>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Email: admin@reflectq.app</li>
-        <li>Phone: +62-877-7576-3231</li>
-        <li>Website: app.reflectq.org</li>
-      </ul>
-    </section>
-
-    <p class="text-center text-sm opacity-70 pt-8">
-      Version 2.0.0
-    </p>
-
+    </div>
   </div>
-</div>
-      <!-- BACK BUTTON -->
-  <a href="#hero"
-     class="fixed bottom-5 right-5
-          sm:bottom-6 sm:right-6
-          z-50
-          flex items-center justify-center
-          w-12 h-12 sm:w-14 sm:h-14
-          rounded-full
-          bg-gray-800 text-white
-          shadow-xl
-          hover:bg-gray-500
-          active:scale-95
-          transition">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-6 h-6"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor"
-         stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15 19l-7-7 7-7" />
-    </svg>
-  </a>
+      <!-- BACK TO HERO BUTTON -->
+<a
+  href="#hero"
+  class="fixed bottom-5 right-5
+         sm:bottom-6 sm:right-6
+         z-50
+         flex items-center justify-center
+         w-12 h-12 sm:w-14 sm:h-14
+         rounded-full
+         bg-gray-800 text-white
+         shadow-xl
+         hover:bg-gray-500
+         active:scale-95
+         transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M15 19l-7-7 7-7"
+    />
+  </svg>
+</a>
     </section>
 
-    <!-- FAQ -->
+    <!-- ================= FAQ ================= -->
     <section
       id="faq"
-      class="bg-[#2F3F4F] text-white py-24 scroll-mt-24 page-section min-h-screen"
+      class="page-section min-h-screen bg-[#2F3F4F] text-white py-24"
     >
       <div class="max-w-3xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-8 text-center">FAQ</h2>
+        <h2 class="text-3xl font-bold mb-10 text-center">FAQ</h2>
 
         <div class="space-y-4">
-
-  <details class="bg-white/10 rounded-xl p-4">
+          <details class="bg-white/10 rounded-xl p-4">
     <summary class="cursor-pointer font-medium">
       What is ReflectQ?
     </summary>
@@ -772,34 +905,38 @@
       After confirmation, your account will be inaccessible and your data will be retained for up to 30 days before permanent deletion. During this period, you may contact support to restore your account if needed.
     </p>
   </details>
-
-</div>
-
+        </div>
       </div>
-      <!-- BACK BUTTON -->
-  <section>
-    <a href="#hero"
-     class="fixed bottom-5 right-5
-          sm:bottom-6 sm:right-6
-          z-50
-          flex items-center justify-center
-          w-12 h-12 sm:w-14 sm:h-14
-          rounded-full
-          bg-white text-black
-          shadow-xl
-          hover:bg-gray-500
-          active:scale-95
-          transition">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-6 h-6"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor"
-         stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15 19l-7-7 7-7" />
-    </svg>
-  </a>
-  </section>
+      <!-- BACK TO HERO BUTTON -->
+<a
+  href="#hero"
+  class="fixed bottom-5 right-5
+         sm:bottom-6 sm:right-6
+         z-50
+         flex items-center justify-center
+         w-12 h-12 sm:w-14 sm:h-14
+         rounded-full
+         bg-white text-black
+         shadow-xl
+         hover:bg-gray-500
+         active:scale-95
+         transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M15 19l-7-7 7-7"
+    />
+  </svg>
+</a>
+    </section>
   </body>
 </html>
